@@ -1,3 +1,3 @@
 # Projects:
 
-#[Amino](lilayah.githu.io/amino)
+[Amino](lilayah.githu.io/amino)
