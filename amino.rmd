@@ -1,0 +1,47 @@
+---
+title: "Aminoacid analysis for spectrometry"
+author: "PH"
+date: '19.03.2019'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Introduction
+
+In our biochemistry class we used spectrometry to determine the concentration of certain proteins(BSA, RNAse, Haemoglobin) with three different methods. These methods are working based on certain aminoacids(AA) absorbing different wavelength of light. The Bradford method works by the absorbance of positively charged aminoacids, while Lowry and Warburg-Christian by tryptophan and tyrosine absorbance.Therefore the results of the different methods are sensitive to the AA content of the proteins. 
+We'll visualize the aforementioned AA content of our proteins to help with interpreting the spectrometric results.
+
+## Packages and data
+
+Protein sequences are taken from https://www.uniprot.org/ then the data is processed in excel.
+
+```{r message=FALSE, warning=FALSE}
+library(readr)
+library(dplyr)
+library(ggplot2)
+library(RColorBrewer)
+
+all_prot = read_csv(file = "all_prot.csv")
+all_prot2 = filter(all_prot, AA=="positives" | AA=="Tyr and Trp" | AA=="all other")
+```
+
+##Visualization
+
+```{r all_prot2}
+ggplot(all_prot2) +
+  aes(x=AA,y=percent,fill=AA)+
+  geom_col(colour = "black")+
+  facet_wrap(~new,nrow=1) +
+  scale_fill_brewer(palette = "Reds")+
+  labs(title="Distribution of different aminoacids in our examined proteins",
+       x="Aminoacids",y="Percentage of all aminoacids [%]")+
+  guides(fill="none")+
+  theme_bw()
+```
+
+##Discussion
+
+Only a slight difference is observable between the AA contents for these proteins, which means the results shouldn't be influenced by them for the proteins relatively to each other.
