@@ -1,3 +1,3 @@
 # Projects:
 
-[Amino](amino.html)
+[Amino](https://lilayah.github.io/amino)
