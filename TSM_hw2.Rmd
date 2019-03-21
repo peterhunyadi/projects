@@ -1,0 +1,53 @@
+---
+title: "Anna homework WIP"
+author: "PH"
+date: "21.03.2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+##Introduction
+
+```{r message=FALSE, warning=FALSE}
+library(readxl)
+library(tidyverse)
+
+TSM_hw = read_excel("TSM_hw.xlsx", sheet = "Data_load")
+```
+
+##Processing data
+
+```{r TSM_hw}
+data_reg = TSM_hw %>%
+  select(Region, population, EF) %>%
+  mutate(EF_total = population*EF) %>%
+  group_by(Region) %>%
+  summarise(EF_reg = sum(EF_total), popu_reg = sum(population)) %>%
+  mutate(EF_reg_per_cap = EF_reg/popu_reg)
+```
+
+##Plot1
+
+```{r data_reg}
+ggplot(data_reg) +
+  geom_col(aes(x = reorder(Region, EF_reg_per_cap, FUN = max), y = EF_reg_per_cap, fill = 'red2'), colour = "black") +
+  guides(fill = "none") +
+  labs(x = 'Region', y = 'Ecological Footprint/capita [gha/person]',
+       title = 'Ecological Footprint per capita in the Regions') +
+  theme_classic() +
+  coord_flip()
+```
+
+##Plot2
+
+```{r}
+ggplot(TSM_hw) +
+  geom_boxplot(aes(Jellemzo, EF, fill = Jellemzo)) +
+  labs(x = 'Characteristic Sector', y = 'Ecological Footprint/capita [gha/person]', title='Ecological Footprint per capita boxplot') +
+  scale_fill_manual(values = c("#7effdb","#b693fe","#8c82fc")) +
+  guides(fill = "none") +
+  theme_bw()
+```
