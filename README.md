@@ -1,5 +1,5 @@
 # Projects:
 
-[Amino](https://lilayah.github.io/amino) <br>
-[Eco homework WIP](https://lilayah.github.io/TSM_hw2.html) <br>
-[Bachelor supplementary excel sheet](https://lilayah.github.io/my_supp_table.xlsx)
+[Amino](https://peter_hunyadi.github.io/amino) <br>
+[Eco homework WIP](https://peter_hunyadi.github.io/TSM_hw2.html) <br>
+[Bachelor supplementary excel sheet](https://peter_hunyadi.github.io/my_supp_table.xlsx)
