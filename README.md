@@ -1,7 +1,7 @@
 # Projects:
 
 2021 <br>
-[Colored Bitmap](https://peterhunyadi.github.io/projects/Bitmap.html)
+[Colored Bitmap](https://peterhunyadi.github.io/projects/Bitmap.html) <br>
 [Randomly solving a MC Test](https://peterhunyadi.github.io/projects/multiple_choice_test.html)
 
 2020 :( <br>
