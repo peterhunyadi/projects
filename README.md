@@ -1,7 +1,7 @@
 # Projects:
 
 2022 <br>
-[Color Palette from Movie Frames]() <br>
+[Color Palette from Movie Frames](https://peterhunyadi.github.io/projects/colorpalette_notebook.html) <br>
 
 2021 <br>
 [Colored Bitmap](https://peterhunyadi.github.io/projects/Bitmap.html) <br>
