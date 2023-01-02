@@ -1,6 +1,8 @@
 # Projects:
 
 2022 <br>
+[Graph solution of a task overlap problem](https://peterhunyadi.github.io/projects/tasks_network_dec13-15.html) <br>
+[](https://peterhunyadi.github.io/projects/) <br>
 [Shortest Path in a Network with Edge traverse Costs](https://peterhunyadi.github.io/projects/city_shortest_path.html) <br>
 [Color Palette from Movie Frames](https://peterhunyadi.github.io/projects/colorpalette_notebook.html) <br>
 
